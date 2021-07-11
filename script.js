@@ -6,6 +6,20 @@ function compute() {
 
   // Result DOM element
   const result = document.getElementById("result");
+  const principalElm = document.getElementById("principal");
+  const principalError = document.getElementById("principalError")
+
+  // Resets
+  principalError.style.display = 'none';
+  result.innerHTML = '';
+
+  // Validation
+  if (isNaN(principal) || principal <= 0){
+    principalError.style.display = 'inline';
+    return principalElm.focus();
+  }
+
+
 
   // Calculations
   const currentYear = new Date().getFullYear();
@@ -14,9 +28,9 @@ function compute() {
 
   result.innerHTML = `
     <p>
-        If you deposit ${principal},<br/>
+        If you deposit ${principal}$,<br/>
         at an iterest rate of ${rate}%.<br/>
-        You will receive an amount of ${calculatedAmount}.<br/>
+        You will receive an amount of ${calculatedAmount.toFixed(2)}$.<br/>
         in the year ${calculatedYear}
     </p>
 `;

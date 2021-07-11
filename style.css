@@ -33,7 +33,20 @@ body {
     width: 125px;
 }
 
+.calculator--card .calculator--container tr td {
+    vertical-align: top;
+}
+
 #principal {
     width: 150px;
     box-sizing: border-box;
+}
+
+#principalError {
+    display: none;
+}
+
+#principalError small {
+    font-size: 12px;
+    color: red;
 }

@@ -28,10 +28,10 @@ function compute() {
 
   result.innerHTML = `
     <p>
-        If you deposit ${principal}$,<br/>
-        at an iterest rate of ${rate}%.<br/>
-        You will receive an amount of ${calculatedAmount.toFixed(2)}$.<br/>
-        in the year ${calculatedYear}
+        If you deposit <mark>${principal}$</mark>,<br/>
+        at an iterest rate of <mark>${rate}%</mark>.<br/>
+        You will receive an amount of <mark>${calculatedAmount.toFixed(2)}$</mark>.<br/>
+        in the year <mark>${calculatedYear}</mark>
     </p>
 `;
 
